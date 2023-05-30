@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="icon" href="{{ url_for('static', filename='scull.ico') }}">
+      <title> Results</title>
+      <style>
+         body {
+         background-color: #0d2b58;
+         background-image: url(/static/2.jpg);
+         background-size: cover;
+         margin: 0;
+         padding: 0;
+         font-family: "Papyrus", "Comic Sans MS", cursive;
+         }
+         h1 {
+         text-align: center;
+         margin-top: 60px;
+         font-size: 4.5rem;
+         color: #f0b90b;
+         text-shadow: 2px 2px 3px #2d2926;
+         }
+		 h2 {
+         text-align: center;
+         margin-top: 10px;
+         font-size: 2rem;
+         color: #f0b90b;
+         text-shadow: 2px 2px 3px #2d2926;
+         }
+		 .gold-black-btn {
+		  padding: 10px 20px;
+		  background: -moz-linear-gradient(top, #d4af37, #c8a037);
+		  background: -webkit-linear-gradient(top, #d4af37, #c8a037);
+		  background: linear-gradient(to bottom, #d4af37, #c8a037);
+		  border: 1px solid black;
+		  border-radius: 5px;
+		  color: black;
+		  text-shadow: 1px 1px #fff;
+		  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+		  text-align: center;
+		  font-size: 16px;
+		  font-weight: bold;
+		  cursor: pointer;
+		  transition: transform 0.2s ease-in-out;
+		}
+
+		.gold-black-btn:hover {
+		  background: #f0b90b;
+		  transform: scale(1.25);
+		}
+
+		.gold-black-btn:active {
+		  background: #856508;
+		  transform: scale(0.9);
+		}
+		
+		.container {
+		  display: flex;
+		  justify-content: center;
+		  margin-top: 0rem;
+		  border-radius: 10px;
+		}
+
+		.image-wrapper {
+		  padding: 10px;
+		  background-color: #05133c;
+		  height: 600px;
+		  max-width: 100%;
+		  border-radius: 10px;
+		  transition: transform 0.3s ease;
+		  box-sizing: border-box;
+		}
+		
+		.image-wrapper img {
+		  height: 500px;
+		  width: 100%;
+		  object-fit: contain;
+		}
+
+		.image-wrapper:hover {
+		  transform: scale(1.1);
+		  background-color: #000000;
+		}
+      </style>
+   </head>
+   <body>
+	  <a class="gold-black-btn" href="{{url_for('index')}}" style=" position:absolute; top:30px; left:30px; font-weight:bold; text-decoration:none;">&#8592; Back</a>
+      <h1>Results</h1>
+	  <div style="position: absolute; top: 30px; right: 30px;">
+	  </div>
+	  <br><br><br>
+	  <div class="container">
+		  <div class="image-wrapper" style="margin-right: 85px;">
+		    <h2>Input Image</h2>
+			<a href="static/input.jpg" target="_blank">
+				<img src="{{ url_for('static', filename='input.jpg') }}" alt="Processed Image" > 
+			</a>
+		  </div>
+		  <div class="image-wrapper" style="margin-left=85px;">
+			<h2>Processed Image</h2>
+			<a href="static/result.jpg" target="_blank">
+				<img src="{{ url_for('static', filename='result.jpg') }}" alt="Processed Image" > 
+			</a>
+		  </div>
+		</div>
+	  
+	  </div>
+      </table>
+   </body>
+</html>
